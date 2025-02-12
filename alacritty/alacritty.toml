@@ -1,0 +1,72 @@
+import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+# padding.x = 16
+padding.y = 14
+decorations = "buttonless" # Removes the window decoration (title bar, etc.)
+opacity = 0.9
+dynamic_padding = false
+
+[font]
+size = 13
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+# One Dark theme
+[colors]
+[colors.primary]
+background = '0x1e2127'
+foreground = '0xabb2bf'
+bright_foreground = '0xe6efff'
+
+# Normal colors
+[colors.normal]
+black = '0x1e2127'
+red = '0xe06c75'
+green = '0x98c379'
+yellow = '0xd19a66'
+blue = '0x61afef'
+magenta = '0xc678dd'
+cyan = '0x56b6c2'
+white = '0x828791'
+
+# Bright colors
+[colors.bright]
+black = '0x5c6370'
+red = '0xe06c75'
+green = '0x98c379'
+yellow = '0xd19a66'
+blue = '0x61afef'
+magenta = '0xc678dd'
+cyan = '0x56b6c2'
+white = '0xe6efff'
+
+# Dim colors
+[colors.dim]
+black = '0x1e2127'
+red = '0xe06c75'
+green = '0x98c379'
+yellow = '0xd19a66'
+blue = '0x61afef'
+magenta = '0xc678dd'
+cyan = '0x56b6c2'
+white = '0x828791'
