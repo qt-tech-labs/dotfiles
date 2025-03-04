@@ -6,6 +6,14 @@ return {
     version = false, -- set this if you want to always pull the latest change
     opts = {
       provider = "gemini",
+      vendors = {
+        deepseek = {
+          endpoint = "http://127.0.0.1:1234/v1",
+          model = "deepseek-r1-distill-qwen-7b", -- your desired model (or use gpt-4o, etc.)
+          __inherited_from = "openai",
+          api_key_name = "",
+        },
+      },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",

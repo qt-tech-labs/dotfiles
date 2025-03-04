@@ -81,6 +81,7 @@
                   [:##i    :!Speriod]               ; d -> p        >
                   [:##o         :!S3]               ; d -> o        #
 
+                  [:##h         :!S1]               ; d -> h        !
                   [:##j         :!Sequal_sign]      ; d -> j        +
                   [:##k         :hyphen]            ; d -> k        -
                   [:##l         :equal_sign]        ; d -> l        =
@@ -209,7 +210,8 @@
          :rules [:q-mode
                  [:n [:open "/Applications/Zalo.app/"]]
                  [:h [:open "/Applications/Arc.app/"]]
-                 [:l [:open "/Applications/Alacritty.app/"]]
+                 [:g [:open "/Applications/Figma.app/"]]
+                 [:l [:open "/Applications/kitty.app/"]]
                  [:t [:open "/Applications/Microsoft Teams.app/"]]
                  [:v [:open "/Applications/Viber.app/"]]
                  [:u [:open "/Applications/Xcode.app/"]]
