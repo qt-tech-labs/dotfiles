@@ -11,13 +11,15 @@
                                                 ; "^org\\.vim\\.",
                                                 ; "^com\\.qvacua\\.VimR$"
                                                 ]}
+; :applications {:not-switch-copy-paste-application ["^net\\.kovidgoyal\\.kitty$"]}
  :simlayers {
              :f-mode {:key :f}    ; delimeters    ( ) [ ] { } and other symbols ~ $ &
-             :d-mode {:key :d :condi :!vim-mode-disabled-application}    ; arithmetic    + - * / = % < > #
+             ; With condition
+             ; :d-mode {:key :d :condi :!vim-mode-disabled-application}    ; arithmetic    + - * / = % < > #
+             :d-mode {:key :d}    ; arithmetic    + - * / = % < > #
              :a-mode {:key :a}    ; navigation hjkl + tab + enter + page down/up
              :s-mode {:key :s}    ; punctuation   ? ! : ; ' " ` ~
              ;
-             ; :q-mode {:key :q}    ; General shortcuts (browser etc.) - not settled
              :w-mode {:key :w}    ; Selection left and right (letter, word, line)
              :e-mode {:key :e}    ; Movement left and right (letter, word, line)
              :r-mode {:key :r}    ; Deletion left and right (letter, word, line)
@@ -114,6 +116,9 @@
                   [:##l :right_arrow]
                   [:##n :return_or_enter]
                   [:##m :dashboard]
+                  [:##c :!Cc]
+                  [:##v :!Cv]
+                  [:##x :!Cx]
                   [:##u :tab]
                   [:##i :al_wireless_status]
                   [:comma :page_down]

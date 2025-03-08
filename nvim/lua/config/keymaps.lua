@@ -9,7 +9,7 @@ vim.keymap.del("n", "L")
 --
 -- Add new keys
 --
--- vim.keymap.set("n", "<leader>r", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter." })
+vim.keymap.set("n", "<leader>r", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter." })
 vim.keymap.set("n", "L", function()
   vim.diagnostic.open_float()
 end, { desc = "Show the error under the cursor." })

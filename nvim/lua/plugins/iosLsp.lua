@@ -1,44 +1,19 @@
 return {
-  -- {
-  --   "xbase-lab/xbase",
-  --   dependencies = {
-  --     "neovim/nvim-lspconfig",
-  --   },
-  --   build = "make install",
-  --   config = function()
-  --     local lspconfig = require("lspconfig")
-  --     lspconfig.sourcekit.setup({})
-  --     require("xbase").setup({
-  --       log_level = vim.log.levels.DEBUG,
-  --       simctl = {
-  --         iOS = {
-  --           "iPhone 15 Pro",
-  --         },
-  --       },
-  --       mappings = {
-  --         build_picker = 0,
-  --         run_picker = 0,
-  --         watch_picker = 0,
-  --         all_picker = 0,
-  --         toggle_split_log_buffer = 0,
-  --         toggle_vsplit_log_buffer = 0,
-  --       },
-  --     })
-  --   end,
-  -- },
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     local lspconfig = require("lspconfig")
-  --     lspconfig.sourcekit.setup({
-  --       capabilities = {
-  --         workspace = {
-  --           didChangeWatchedFiles = {
-  --             dynamicRegistration = true,
-  --           },
-  --         },
-  --       },
-  --     })
-  --   end,
-  -- },
+  "neovim/nvim-lspconfig",
+  event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "hrsh7th/cmp-nvim-lsp",
+    { "antosha417/nvim-lsp-file-operations", config = true },
+  },
+  opts = {
+    servers = {
+      sourcekit = {},
+    },
+    setup = {
+      sourcekit = function(_, opts)
+        local lspconfig = require("lspconfig")
+        lspconfig["sourcekit"].setup({})
+      end,
+    },
+  },
 }

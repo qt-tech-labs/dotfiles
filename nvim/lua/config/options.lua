@@ -6,3 +6,4 @@ vim.cmd([[
   highlight LspDiagnosticsFloatingWarning guibg=#D3D3D3
   highlight LspDiagnosticsFloatingError guibg=#D3D3D3
 ]])
+vim.g.lazyvim_picker = "telescope"
