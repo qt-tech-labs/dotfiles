@@ -48,7 +48,7 @@
         {:des "CAPSLOCK is CTRL if pressed in combination, otherwise ESC"
          :rules  [
             [:##caps_lock        :left_control     nil         {:alone :escape}]
-            [:##tab        :left_command     nil         {:alone :tab}]
+            ; [:##tab        :left_command     nil         {:alone :tab}]
           ]}
   
         {:des "FN to alt"
@@ -56,10 +56,10 @@
             [:##fn :left_option nil {:alone :fn}]
           ]}
 
-        {:des "Disable delete_or_backspace, and the left_command"
-         :rules  [
-            [:delete_or_backspace :vk_none]
-          ]}
+        ; {:des "Disable delete_or_backspace, and the left_command"
+        ;  :rules  [
+        ;     [:delete_or_backspace :vk_none]
+        ;   ]}
 
         {:des "f-mode for delimeters and ! ? $"
          :rules [:f-mode
@@ -214,8 +214,10 @@
         {:des "q-mode for launch application"
          :rules [:q-mode
                  [:n [:open "/Applications/Zalo.app/"]]
-                 [:h [:open "/Applications/Arc.app/"]]
                  [:g [:open "/Applications/Figma.app/"]]
+                 [:h [:open "/Applications/Arc.app/"]]
+                 [:j [:openA "simulator"]]
+                 [:k [:open "/Applications/Visual Studio Code.app/"]]
                  [:l [:open "/Applications/kitty.app/"]]
                  [:t [:open "/Applications/Microsoft Teams.app/"]]
                  [:v [:open "/Applications/Viber.app/"]]
@@ -223,7 +225,7 @@
                  [:i [:open "/Applications/Android Studio.app/"]]
                  [:p [:open "/Applications/Postman.app/"]]
                  [:o [:open "/Applications/zoom.us.app/"]]
-                 [:m [:open "/Applications/Emacs.app/"]]
+                 [:m [:open "/Applications/Cursor.app/"]]
                  [:b [:open "/Applications/Anki.app/"]]
                  [:f [:openA "Finder"]]
                  [:y [:open  "/Applications/Microsoft Outlook.app/"]]
