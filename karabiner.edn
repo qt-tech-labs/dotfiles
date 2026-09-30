@@ -215,10 +215,11 @@
          :rules [:q-mode
                  [:n [:open "/Applications/Zalo.app/"]]
                  [:g [:open "/Applications/Figma.app/"]]
-                 [:h [:open "/Applications/Arc.app/"]]
+                 [:h [:open "/Applications/Zen.app/"]]
                  [:j [:openA "simulator"]]
                  [:k [:open "/Applications/Visual Studio Code.app/"]]
-                 [:l [:open "/Applications/kitty.app/"]]
+                ;;  [:l [:open "/Applications/kitty.app/"]]
+                 [:l [:openA "Terminal"]]
                  [:t [:open "/Applications/Microsoft Teams.app/"]]
                  [:v [:open "/Applications/Viber.app/"]]
                  [:u [:open "/Applications/Xcode.app/"]]
